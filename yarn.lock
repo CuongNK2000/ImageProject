@@ -2091,6 +2091,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-async-storage/async-storage@npm:1.23.1":
+  version: 1.23.1
+  resolution: "@react-native-async-storage/async-storage@npm:1.23.1"
+  dependencies:
+    merge-options: ^3.0.4
+  peerDependencies:
+    react-native: ^0.0.0-0 || >=0.60 <1.0
+  checksum: 7096546ed4a5faf1f6e0425e2e15713575f1a7493a04524da386ff35c3844b57b8fd20544fad4157b4a61e048b10235f2f06124f262da5b327edc74fbc31e02b
+  languageName: node
+  linkType: hard
+
 "@react-native-community/cli-clean@npm:11.3.2":
   version: 11.3.2
   resolution: "@react-native-community/cli-clean@npm:11.3.2"
@@ -2872,6 +2883,7 @@ __metadata:
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
+    "@react-native-async-storage/async-storage": 1.23.1
     "@react-native-masked-view/masked-view": 0.3.2
     "@react-native/eslint-config": ^0.72.2
     "@react-native/metro-config": ^0.72.6
@@ -2887,15 +2899,22 @@ __metadata:
     babel-jest: ^29.2.1
     eslint: ^8.19.0
     jest: ^29.2.1
+    lottie-react-native: 6.7.2
     metro-react-native-babel-preset: 0.76.5
+    mobx: 6.13.5
+    mobx-react-lite: 4.0.7
     prettier: ^2.4.1
     react: 18.2.0
     react-hook-form: 7.54.2
     react-native: 0.72.0
+    react-native-device-info: 11.1.0
     react-native-gesture-handler: 2.16.2
+    react-native-localization: 2.3.2
     react-native-permissions: 4.1.5
-    react-native-safe-area-context: 4.10.1
+    react-native-raw-bottom-sheet: 3.0.0
+    react-native-safe-area-context: 4.10.5
     react-native-screens: 3.31.1
+    react-native-spinkit: 1.5.1
     react-test-renderer: 18.2.0
     rn-secure-storage: 3.0.1
     typescript: 4.8.4
@@ -5733,6 +5752,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-plain-obj@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "is-plain-obj@npm:2.1.0"
+  checksum: cec9100678b0a9fe0248a81743041ed990c2d4c99f893d935545cfbc42876cbe86d207f3b895700c690ad2fa520e568c44afc1605044b535a7820c1d40e38daa
+  languageName: node
+  linkType: hard
+
 "is-plain-object@npm:^2.0.4":
   version: 2.0.4
   resolution: "is-plain-object@npm:2.0.4"
@@ -6673,6 +6699,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"localized-strings@npm:^0.2.0":
+  version: 0.2.4
+  resolution: "localized-strings@npm:0.2.4"
+  checksum: 678e4c8aa72ca6d2aeb836231a7c3f6c75ff3f12a3241089e237ed86d17e8b987fe563d236de39760f21f31d6b3351655e9f035308f601f748f5f6447698b00b
+  languageName: node
+  linkType: hard
+
 "locate-path@npm:^3.0.0":
   version: 3.0.0
   resolution: "locate-path@npm:3.0.0"
@@ -6763,6 +6796,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-react-native@npm:6.7.2":
+  version: 6.7.2
+  resolution: "lottie-react-native@npm:6.7.2"
+  peerDependencies:
+    "@dotlottie/react-player": ^1.6.1
+    "@lottiefiles/react-lottie-player": ^3.5.3
+    react: "*"
+    react-native: ">=0.46"
+    react-native-windows: ">=0.63.x"
+  peerDependenciesMeta:
+    "@dotlottie/react-player":
+      optional: true
+    "@lottiefiles/react-lottie-player":
+      optional: true
+    react-native-windows:
+      optional: true
+  checksum: 8b14ca10f4f0e75505ee5485b47c31db2146baea1634e66f0d485abb8a44ba2019930239970015cedaad627e306828be977b4797256aa2cc143b476ed31585fa
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0":
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
@@ -6837,6 +6890,15 @@ __metadata:
   version: 5.2.1
   resolution: "memoize-one@npm:5.2.1"
   checksum: a3cba7b824ebcf24cdfcd234aa7f86f3ad6394b8d9be4c96ff756dafb8b51c7f71320785fbc2304f1af48a0467cbbd2a409efc9333025700ed523f254cb52e3d
+  languageName: node
+  linkType: hard
+
+"merge-options@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "merge-options@npm:3.0.4"
+  dependencies:
+    is-plain-obj: ^2.1.0
+  checksum: d86ddb3dd6e85d558dbf25dc944f3527b6bacb944db3fdda6e84a3f59c4e4b85231095f58b835758b9a57708342dee0f8de0dffa352974a48221487fe9f4584f
   languageName: node
   linkType: hard
 
@@ -7888,6 +7950,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mobx-react-lite@npm:4.0.7":
+  version: 4.0.7
+  resolution: "mobx-react-lite@npm:4.0.7"
+  dependencies:
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    mobx: ^6.9.0
+    react: ^16.8.0 || ^17 || ^18
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 8f49844d31116dc9b412b763d068f374014d87aee8e0c7aff93c85cd9df05e62027c5097fb7212527cda6f62114e288a048906b1d35e93138ebba43d885c349c
+  languageName: node
+  linkType: hard
+
+"mobx@npm:6.13.5":
+  version: 6.13.5
+  resolution: "mobx@npm:6.13.5"
+  checksum: 2a253e505900169326873b573660dab58ce8284a435c75d77775a665af9eed623c1976a5eab3cfb53561cac4713f70194f49a2b8e4111419a2e4291f51e5485a
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -8552,7 +8638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:*, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:*, prop-types@npm:^15.5.8, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8661,6 +8747,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-localization@npm:^1.0.17":
+  version: 1.0.19
+  resolution: "react-localization@npm:1.0.19"
+  dependencies:
+    localized-strings: ^0.2.0
+  peerDependencies:
+    react: ^18.0.0 || ^17.0.0 || ^16.0.0 || ^15.6.0
+  checksum: 0a2ee446223d653f2116226e92e1d401d07614b62820678d4d33d2c88b2486246e1c9b0d0b6464d16022ec8e1d6d1cf8f7f1bb55571de136387f9355d2a174a8
+  languageName: node
+  linkType: hard
+
+"react-native-device-info@npm:11.1.0":
+  version: 11.1.0
+  resolution: "react-native-device-info@npm:11.1.0"
+  peerDependencies:
+    react-native: "*"
+  checksum: 272cab82573933a1f3a9bc394b82a387ccbdf9fbef131fc1f04b8ff78b36f581931b5c643f5aa278f28577cbc320ef2ac588cafdb73292e9b0cf4427d54c44ce
+  languageName: node
+  linkType: hard
+
 "react-native-gesture-handler@npm:2.16.2":
   version: 2.16.2
   resolution: "react-native-gesture-handler@npm:2.16.2"
@@ -8674,6 +8780,22 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 3f3309de471b8de654624c54793f6d72236869156ee61c1adc8bba0f4aca6ffc8ed02035eb85820473091d33eb5ec8b42a0e387a21ec25dc30ee345dff0c1142
+  languageName: node
+  linkType: hard
+
+"react-native-localization@npm:2.3.2":
+  version: 2.3.2
+  resolution: "react-native-localization@npm:2.3.2"
+  dependencies:
+    react-localization: ^1.0.17
+  peerDependencies:
+    react: ">15.6.0"
+    react-native: ">0.64"
+    react-native-windows: ">0.64"
+  peerDependenciesMeta:
+    react-native-windows:
+      optional: true
+  checksum: ec349d16fb2a97ecba471410f383feaa78b56880337e11750f99fa0ede678d6372e40a809b75ac8dee256ad47e9916687ef259999805e085e286d66af10fb24e
   languageName: node
   linkType: hard
 
@@ -8691,13 +8813,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-safe-area-context@npm:4.10.1":
-  version: 4.10.1
-  resolution: "react-native-safe-area-context@npm:4.10.1"
+"react-native-raw-bottom-sheet@npm:3.0.0":
+  version: 3.0.0
+  resolution: "react-native-raw-bottom-sheet@npm:3.0.0"
+  checksum: bd8cb9fff9240d1d09279910498efb26df80631f697fd7d93352f1247f30880d6ec6d1c978822f59d1cd375b03c9dad48d6f520935fde13b7ae35ec8305a2694
+  languageName: node
+  linkType: hard
+
+"react-native-safe-area-context@npm:4.10.5":
+  version: 4.10.5
+  resolution: "react-native-safe-area-context@npm:4.10.5"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: a0f31a66f0aba7050cfdc34512349f49dd65349d53407d461196fa70010f65aca7310212d5c7c47078745db6e02975a4d97881d0340160d40e0feb5a4a5d9de2
+  checksum: 94e049a5579e8cbe6d08a6da89efc948ff20042c7c08670341ec3629752fa40d0b1f14471860a18fdfc121fbdee1b58d582704f3fd2dc612890a0bd002f908a1
   languageName: node
   linkType: hard
 
@@ -8711,6 +8840,15 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 1fc61cf7a223b3ef1c8000e74416c8953561c5fa0861557da43659db62a640e37fb51fbdc35dae810a665881a7aa9eeaf1873e90f67404b4dda53a672464a7fe
+  languageName: node
+  linkType: hard
+
+"react-native-spinkit@npm:1.5.1":
+  version: 1.5.1
+  resolution: "react-native-spinkit@npm:1.5.1"
+  dependencies:
+    prop-types: ^15.5.8
+  checksum: 20f3de49c77e61033db9e0a1fb710f0cb8ac3b4126de98c82627b73992cfd922252822eb30c5b70669dc31fc0d5b0a89de2236c6ad2a115e3b28407cf9696ad8
   languageName: node
   linkType: hard
 
@@ -10165,7 +10303,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.0.0":
+"use-sync-external-store@npm:^1.0.0, use-sync-external-store@npm:^1.2.0":
   version: 1.4.0
   resolution: "use-sync-external-store@npm:1.4.0"
   peerDependencies:
