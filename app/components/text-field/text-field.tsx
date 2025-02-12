@@ -16,7 +16,7 @@ import {useController, Control} from 'react-hook-form';
 import {color, scale, spacing, typography} from '../../themes';
 import {IconTypes} from '../../assets';
 import useI18n from '../../i18n/context';
-import {handleDateInput} from '../../utils/time';
+// import {handleDateInput} from '../../utils/time';
 import {Icon} from '..';
 import i18n from '../../i18n';
 
@@ -266,12 +266,12 @@ export function TextField(props: TextFieldProps) {
         case 'any':
           text = text.replace(/\s\s+/g, ' ');
           break;
-        case 'date':
-          text = handleDateInput(text);
-          break;
-        case 'dateNonCheckYear':
-          text = handleDateInput(text, true);
-          break;
+        // case 'date':
+        //   text = handleDateInput(text);
+        //   break;
+        // case 'dateNonCheckYear':
+        //   text = handleDateInput(text, true);
+        //   break;
         case 'number':
           text = text.trim().replace(/[^0-9]/g, '');
           break;

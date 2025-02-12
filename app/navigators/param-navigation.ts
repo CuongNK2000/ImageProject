@@ -5,4 +5,5 @@ export type PrimaryParamList = {
   [screenNames.loginScreen]: undefined;
   [screenNames.homeScreen]: undefined;
   [screenNames.settingScreen]: undefined;
+  [screenNames.bottomTab]: undefined;
 };

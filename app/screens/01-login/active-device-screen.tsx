@@ -18,15 +18,18 @@ import {
   verticalScale,
   widthScreenFull,
 } from '../../themes/resize';
-import {Button, Screen, Text, TextField} from '../../components';
+import {Screen, Text} from '../../components';
+// import GroupAvatar from './components/groupAvatar';
+import {icons} from '../../assets';
+import theme from '../../themes/configs';
+import {TextField} from '../../components/text-field/text-field';
 import i18n from '../../i18n';
 import {useForm} from 'react-hook-form';
-import theme from '../../themes/configs';
-import {icons} from '../../assets';
+import {Button} from '../../components/button/button';
 import {RootNavigation} from '../../navigators/navigation-ultilities';
 import {bottomTab} from '../../navigators';
 
-export const LoginScreen = () => {
+export const ActiveDeviceScreen = () => {
   const [imageUri, setImageUri] = useState<string | null>(null);
   const {control, handleSubmit} = useForm();
 
@@ -42,12 +45,12 @@ export const LoginScreen = () => {
   });
 
   const goForgotPasswordScreen = React.useCallback(() => {
-    // RootNavigation.navigate();
+    // RootNavigation.navigate("");
   }, []);
 
-  const goActiveDeviceScreen = React.useCallback(() => {
-    // RootNavigation.navigate(activeDeviceScreen);
-    // RootNavigation.navigate('recommenderOpenAccountScreen');
+  const goRegisterScreen = React.useCallback(() => {
+    // RootNavigation.navigate('createNewAccount');
+    // RootNavigation.navigate(registerNewAccount);
   }, []);
 
   const onsubmit = React.useCallback(async data => {
@@ -80,16 +83,18 @@ export const LoginScreen = () => {
         // },
       },
     };
+
+    // const errorData = validate(RULE, data);
     RootNavigation.reset({index: 0, routes: [{name: bottomTab}]});
   }, []);
 
-  // const onDisableErrorUsername = React.useCallback(() => {
-  //   error.username &&
-  //     setError({
-  //       ...error,
-  //       username: false,
-  //     });
-  // }, [error]);
+  const onDisableErrorUsername = React.useCallback(() => {
+    error.username &&
+      setError({
+        ...error,
+        username: false,
+      });
+  }, [error]);
 
   const onDisableErrorPwd = React.useCallback(() => {
     error.password &&
@@ -125,6 +130,18 @@ export const LoginScreen = () => {
             <View style={styles.contentLogin}>
               <View style={styles.groupCenter}>
                 <TextField
+                  name="phoneNumber"
+                  keyboardType="number-pad"
+                  control={control}
+                  label={i18n.accountInformation.phoneNumber}
+                  placeholder={i18n.accountInformation.phoneNumber}
+                  error={error.username}
+                  errorText={error.usernameText}
+                  style={styles.fieldUsername}
+                  onDisableError={onDisableErrorUsername}
+                  onSubmitEditing={handleSubmit(onsubmit)}
+                />
+                <TextField
                   name="password"
                   control={control}
                   label={i18n.accountInformation.passWord}
@@ -144,9 +161,9 @@ export const LoginScreen = () => {
                 <View style={styles.bntLinkContainer}>
                   <TouchableOpacity
                     style={styles.bntRegister}
-                    onPress={goActiveDeviceScreen}>
+                    onPress={goRegisterScreen}>
                     <Text style={styles.textRegister}>
-                      {i18n.login.otherAccount}
+                      {i18n.login.registerNow}
                     </Text>
                   </TouchableOpacity>
 

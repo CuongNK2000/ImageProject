@@ -10,3 +10,4 @@ export * from './header/header';
 export * from './loading/loadingModal';
 export * from './popupError/popupError';
 export * from './success-popup/modalPortal';
+export * from './text-field/text-field';
